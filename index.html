@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Friendship Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 5px;
+            background-image: url(./deadpool-wolverine-2024-plamia-sobaka-logan-dedpul-i-rosomak.jpg);
+            background-size: cover;
+        
+        }
+
+        h2 {
+            font-size: 100px;
+            text-align: center;
+            color: aquamarine;
+            margin-top: 5px;
+        }
+
+        .a {
+            margin-top: 5px;
+            background-color: rgba(0, 255, 255, 0.288);
+            color: white;
+            text-shadow: black 10px 1px 15px;
+            font-size: 20px;
+            text-align: start;
+        }
+
+        .b {
+            display: flex;
+            align-items: center;
+            font-size: 50px;
+            color: aliceblue;
+        }
+
+        .name2 {
+            margin-left: 940px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Friendship Calculator</h2>
+    <div class="a">
+        <h1>What Is Friendship?</h1>
+        <p>We have people in our lives of whom we refer to as “friends” but what, exactly, does this mean? The nature of
+            friendship exists on a wide spectrum but despite whether people are <br> good friends, close friends, best
+            friends, work friends or school friends, friendship can only exist by combining trust, support,
+            communication, <br> loyalty, understanding, empathy and intimacy.</p>
+    </div>
+    <div class="b">
+        <div style="border: 3px;  ">
+            <label for="user1">First Name:</label>
+            <br>
+            <input type="text" id="user1" placeholder="Enter first name"
+                style=" font-size: 25px; padding: 30px 50px 30px 50px; border-radius: 20px;">
+        </div>
+        <div class="name2">
+
+            <label for="user2">Second Name:</label>
+            <br>
+            <input type="text" id="user2" placeholder="Enter second name"
+                style=" justify-content: flex-end; font-size: 25px; padding: 30px 50px 30px 50px; border-radius: 20px;">
+
+
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 200px; font-size: 100px;">
+        <button onclick="friendship()"
+            style=" padding: 30px 50px 30px 50px; border-radius: 20px; font-size: 25px;">Check Friendship</button>
+    </div>
+    <div id="result"
+        style="background-color: gold; text-align: center; margin-top: 100px; font-size: 100px; border: 10px; color: aqua;">
+    </div>
+
+
+    <script>
+        function friendship() {
+            const userName = document.getElementById('user1').value;
+            const userName1 = document.getElementById('user2').value;
+
+            if (!userName || !userName1) {
+                document.getElementById('result').innerText = "Please enter both names!";
+                return;
+            }
+
+            let a = Math.floor(Math.random() * 100) + 1; // 1 to 100
+            var friend = '';
+
+            if (a > 80 && a < 100) {
+                friend = "Best friendship 💖";
+            } else if (a === 80) {
+                friend = "Good friendship 😊";
+            } else if (a < 80 && a > 40) {
+                friend = "Normal friendship 🙂";
+            } else if (a === 40) {
+                friend = "Not bad friendship 😐";
+            } else {
+                friend = "Bad friendship 😢";
+            }
+
+            document.getElementById('result').innerText = `Your Friendship: ${a}% – ${friend}`;
+        }
+    </script>
+
+</body>
+
+</html>
